@@ -6,7 +6,7 @@
 'use strict';
 var moment = require('moment');
 var logger = require('apiconnect-cli-logger/logger.js')
-        .child({ loc: 'microgateway:policies:rate-limiting:get-interval' });
+        .child({ loc: 'microgateway-util:rate-limiting:get-interval' });
 var assert = require('assert');
 
 module.exports = function getInterval(limit, period, unit, unparsed) {
