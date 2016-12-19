@@ -1,0 +1,27 @@
+{
+  "name": "microgateway-util",
+  "version": "1.0.0",
+  "description": "Common repo for utils used by microgateway and microgateway-datastore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strongloop/microgateway-util.git"
+  },
+  "keywords": [
+    "microgateway",
+    "datastore"
+  ],
+  "author": "Jeremy Geddes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strongloop/microgateway-util/issues"
+  },
+  "homepage": "https://github.com/strongloop/microgateway-util#readme",
+  "dependencies": {
+    "apiconnect-cli-logger": "^1.2.4",
+    "moment": "^2.17.1"
+  }
+}
