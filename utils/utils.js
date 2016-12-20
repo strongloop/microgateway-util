@@ -8,7 +8,7 @@ var path = require('path');
 var fs = require('fs');
 var Promise = require('bluebird');
 var log = require('apiconnect-cli-logger/logger.js')
-                  .child({ loc: 'microgateway:utils' });
+                  .child({ loc: 'microgateway-util:utils' });
 var crypto = require('crypto');
 var url = require('url');
 var request = require('request');
@@ -21,8 +21,8 @@ exports.getTLSConfigSync = function() {
   var rev;
   var cfg = process.env[env.TLS_SERVER_CONFIG] ?
       //the env value should be a relative path to parent directory
-      path.resolve(__dirname, '..', process.env[env.TLS_SERVER_CONFIG]) :
-      path.resolve(__dirname, '..', 'config', 'defaultTLS.json');
+      path.resolve(__dirname, '../../..', process.env[env.TLS_SERVER_CONFIG]) :
+      path.resolve(__dirname, '../../..', 'config', 'defaultTLS.json');
 
   try {
     rev = JSON.parse(fs.readFileSync(cfg));
@@ -187,9 +187,9 @@ exports.handshakeWithAPIm = function(apim, privKey, doneCB) {
   if (privKey instanceof Function) {
     doneCB = privKey;
     try {
-      privKey = fs.readFileSync(path.resolve(__dirname, '..', env.KEYNAME));
+      privKey = fs.readFileSync(path.resolve(__dirname, '../../..', env.KEYNAME));
     } catch (e) {
-      doneCB(new Error('can not load default private key'));
+      doneCB(new Error('can not load default private key ' + e + ' path: ' + path.resolve(__dirname, '../../..', env.KEYNAME)));
       return;
     }
   }
