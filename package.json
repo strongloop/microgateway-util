@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ibm-apiconnect/microgateway-util.git"
+    "url": "git+https://github.com/strongloop/microgateway-util.git"
   },
   "keywords": [
     "microgateway",
@@ -17,9 +17,9 @@
   "author": "IBM",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/ibm-apiconnect/microgateway-util/issues"
+    "url": "https://github.com/strongloop/microgateway-util/issues"
   },
-  "homepage": "https://github.com/ibm-apiconnect/microgateway-util#readme",
+  "homepage": "https://github.com/strongloop/microgateway-util#readme",
   "dependencies": {
     "apiconnect-cli-logger": "^1.2.4",
     "moment": "^2.17.1",
